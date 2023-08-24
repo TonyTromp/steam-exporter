@@ -3,6 +3,8 @@ services:
   steam_exporter:
     build: .
     image: edgecrush3r/steam_exporter:latest
+    ports:
+    - "8000:8000"
     environment:
       - STEAM_KEY=${STEAM_KEY}
       - STEAM_USERID=${STEAM_USERID}
