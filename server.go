@@ -50,11 +50,11 @@ func main() {
 		printUsageExit()
 	}
 
-	if flag.NArg() < 1 {
-		printUsageExit()
+	var user = flag.Arg(0)
+	if (len(user) == 0) {
+		user = os.Getenv("STEAM_USERID")
 	}
 
-	var user = flag.Arg(0)
 
 	initMetrics()
 
