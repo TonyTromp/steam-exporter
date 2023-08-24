@@ -2,7 +2,7 @@ version: '3'
 services:
   steam_exporter:
     build: .
-    image: steam_exporter
+    image: edgecrush3r/steam_exporter:latest
     environment:
       - STEAM_KEY=${STEAM_KEY}
       - STEAM_USERID=${STEAM_USERID}
